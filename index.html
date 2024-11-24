@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portofolio ku</title>
+    <link rel="stylesheet" href="src/output.css">
+    <script>
+    document.documentElement.classList.toggle(
+        'dark',
+        localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      )</script>
+</head>
+<body>
+  <!-- header start -->
+   <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 "> 
+<div class="container ">
+    <div class="flex items-center justify-between relative">
+        <div class="px-4">
+            <a href="#" class="font-bold text-lg text-primary block py-4">HUBBAB</a>
+        </div>
+        <div class="flex items-center px-4 ">
+            <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden ">
+                <span class="w-[30px] h-[2px] my-2 block bg-dark dark:bg-white transition duration-300 ease-in-out origin-top-left"></span>
+                <span class="w-[30px] h-[2px] my-2 block bg-dark dark:bg-white transition duration-300 ease-in-out"></span>
+                <span class="w-[30px] h-[2px] my-2 block bg-dark dark:bg-white transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+
+            <nav id="nav-menu" class="hidden absolute py-4 bg-white shadow-lg dark:bg-dark lg:dark:bg-transparent dark:shadow-slate-500 rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none" >
+<ul class="block lg:flex font-bold">
+    <li class="group">
+        <a href="#home" class="text-base text-dark py-2 mx-8  flex group-hover:text-primary dark:text-white">Beranda</a>
+    </li>
+    <li class="group">
+        <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Tentang Saya</a>
+    </li>
+    <li class="group">
+        <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portfolio</a>
+    </li>
+    <li class="group">
+        <a href="#client" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Bahasa</a>
+    </li>
+    <li class="group">
+        <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Blog</a>
+    </li>
+    <li class="group">
+        <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Contact</a>
+    </li>
+    <li class=" mt-3 lg:mt-0 flex items-center pl-8">
+        <div class="flex  ">
+            <span class="mr-2 text-sm text-slate-500 dark:text-white ">Terang </span>
+            <input type="checkbox" class="hidden dark:bg-white " id="dark-toggle">
+            <label for="dark-toggle">
+                <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1 ">
+                    <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                </div>
+            </label>
+            <span class="ml-2 text-sm text-slate-500 dark:text-white ">Gelap</span>
+        </div>
+    </li>
+</ul>
+            </nav>
+
+        </div>
+    </div>
+</div>
+   </header>
+  <!-- header end -->
+    <!-- hero start -->
+     <section id="home" class="pt-36 pb-32 dark:bg-dark ">
+        <div class=".container">
+            <div class="flex flex-wrap ">
+                <div class="w-full self-center px-4 lg:w-1/2 animate-fadeIn delay-100">
+                    <h1 class="text-base font-semibold text-primary md:text-xl animate-fadeIn ">Hallo, Saya <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white animate-fadeIn delay-300"> Muhammad Hubbab Amaruddin </span></h1>
+                    <h2 class="font-medium text-n text-lg mb-5 lg:text-2xl text-purple-800 dark:text-purple-800 animate-fadeIn delay-500"  >Student & <span class="text-purple-800 dark:text-purple-400">Junior Programer</span> </h2>
+                    <p class="font-medium text-slate-400 mb-10 leading-relaxed ">"Membangun solusi teknologi kreatif untuk mendukung transformasi digital Anda."</p>
+                    <p>
+                    <div class="flex items-center mb-10"> 
+                        <a href="https://instagram/hubbabbb" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+                            </a>
+                        <a href="https://www.linkedin.com/in/hubbab-amaruddin-948321298/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border hover:border-primary hover:bg-primary hover:text-white dark:text-white">
+                            <svg role="img"class="fill-current"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </a>
+                        <a href="https://www.facebook.com/share/14ZmEh72Vv/?mibextid=qi2Omg" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
+                            <svg role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                            </a>
+                        <a href="https://github.com/Hubbab-IT" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white ">
+                            <svg role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        </a>
+                       </div>
+                    </p>
+                    <a href="https://hubbabweb.blogspot.com/p/cv-saya.html" target="_blank" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out lg:mt-3" > Download CV</a>
+                </div>
+                <div class="w-full self-end px-4 lg:w-1/2">
+                    <div class=" relative mt-10 lg:mt-9 lg:right-0 transform transition duration-300 hover:scale-105"> 
+                        <img src="/gambar/te-removebg-preview.png" alt="Hubbab"  class="max-w-full mx-auto relative z-10 ">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <!-- hero end -->
+     <!-- about start -->
+      <section id="about" class="pt-36 pb-32 dark:bg-dark">
+        <div class="container">
+            <div class="flex flex-wrap">
+                
+                <div class="w-full self-end px-4 lg:w-1/2">
+                    <div class=" relative mt-10 lg:mt-9 lg:right-0"> 
+                        <img src="/gambar/ftq-removebg-preview.png" alt="Hubbab" class="max-w-full mx-auto relative z-10">
+                        
+                    </div>
+                </div>
+                <div class="w-full px-4 mb-18 lg:w-1/2">
+                    <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya</h4>
+                    <h2 class="font-bold text-dark last:text-3xl max-w-md lg:text-4xl mb-1 dark:text-white
+                    ">Semangat Belajar, Semangat Berkarya</h2>
+                    <p class="font-medium text-base text-secondary max-w-xl mb-5 ">Halo! Saya adalah seorang mahasiswa yang sedang mendalami bidang Teknik Informatika di Universitas Semarang, dengan semangat besar untuk berkembang di dunia teknologi. Saat ini, saya aktif mempelajari berbagai bahasa pemrograman seperti [daftar bahasa pemrograman kamu] dan berfokus pada pengembangan keterampilan di bidang AI, sistem digital, dan pemrograman.</p> 
+                    <p class="font-medium text-base text-secondary max-w-xl mb-5 ">Selain itu, saya juga memiliki ketertarikan khusus di bidang fotografi dan sering menghadiri seminar untuk memperluas wawasan. Blog yang saya kelola bertemakan berita teknologi dan IT, mencerminkan minat saya dalam menjembatani perkembangan teknologi dengan masyarakat.</p>
+                    <p class="font-medium text-base text-secondary max-w-xl mb-5">Jika ingin mengenal saya lebih jauh atau berkolaborasi, jangan ragu untuk <a href="#contact" class="text-primary"> menghubungi saya!</a></p>
+
+                </div>
+            </div>
+        </div>
+      </section>
+     <!-- about end -->
+      
+      <!-- portfolio start -->
+       <section id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Sertifikasi</h2>
+                    <p class="font-medium text text-md text-secondary md:text-lg">Saya percaya pembelajaran tidak pernah berhenti. Untuk meningkatkan keterampilan dan kredibilitas, saya telah menyelesaikan berbagai pelatihan dan sertifikasi. Sertifikasi ini membuktikan komitmen saya terhadap pengembangan profesional di dunia teknologi.</p>
+                </div>
+            </div>
+
+<div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+<div class="mb-12 p-4  md:w-1/2">
+<div class="group rounded-md shadow-md overflow-hidden">
+    <img src="mtcna.jpg" alt=""width="w-full" class="w-full h-auto filter blur-sm group-hover:blur-0 transition duration-100">
+</div>
+<h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Sertifikasi MTCNA MikroTik</h3>
+<p class="font-medium text-base text-secondary">Sebagai pemegang sertifikasi MTCNA, saya memiliki kemampuan dalam mengkonfigurasi, mengelola, dan mengoptimalkan jaringan menggunakan perangkat MikroTik. Sertifikasi ini membuktikan keahlian saya di bidang jaringan komputer.</p>
+</div>
+<div  class="mb-12 p-4  md:w-1/2">
+<div class="group rounded-md shadow-md overflow-hidden">
+    <img src="/gambar/htmlsolo.png" alt=""width="w-full" class="w-full h-auto filter blur-sm group-hover:blur-0 transition duration-100">
+</div>
+<h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Sertifikasi HTML</h3>
+<p class="font-medium text-base text-secondary">Sertifikasi ini menunjukkan pemahaman saya tentang dasar-dasar HTML, termasuk struktur halaman web, elemen-elemen penting seperti tag, atribut, formulir, tabel, dan pengelolaan hyperlink. Saya juga telah mempelajari cara membuat halaman web yang terstruktur dan semantik, memastikan aksesibilitas dan keterbacaan bagi pengguna maupun mesin pencari.</p>
+</div>
+<div class="mb-12 p-4  md:w-1/2">
+<div class="group rounded-md shadow-md overflow-hidden">
+    <img src="/gambar/csssolo.png" alt=""width="w-full" class="w-full h-auto filter blur-sm group-hover:blur-0 transition duration-100">
+</div>
+<h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Sertifikasi CSS</h3>
+<p class="font-medium text-base text-secondary">Sertifikasi ini menunjukkan kemampuan saya dalam menggunakan CSS untuk mendesain dan mengatur tampilan halaman web. Saya mempelajari cara menggunakan selektor, properti styling, dan layout responsif untuk menciptakan pengalaman pengguna yang menarik dan konsisten di berbagai perangkat.</p>
+</div>
+<div class="mb-12 p-4  md:w-1/2">
+<div class="group rounded-md shadow-md overflow-hidden">
+    <img src="/gambar/jssolo.png" alt=""width="w-full" class="w-full h-auto filter blur-sm group-hover:blur-0 transition duration-100">
+</div>
+<h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Sertifikasi JavaScript</h3>
+<p class="font-medium text-base text-secondary">Sertifikasi ini menunjukkan kemampuan saya dalam mengembangkan fitur interaktif pada halaman web menggunakan JavaScript. Saya mempelajari konsep dasar pemrograman seperti variabel, fungsi, array, DOM manipulation, dan event handling. Sertifikasi ini juga mencakup logika dasar dan pengenalan ke pengembangan web yang lebih dinamis.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+        </div>
+       </section>
+       <!-- portfolio end -->
+
+       <!-- bahasa start -->
+        <section id="client" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-300">
+            <div class="container">
+<div class="w-full px-4">
+    <div class=" mx-auto text-center mb-16">
+        <h3 class="font-semibold text-lg text-primary mb-2">Bahasa Pemograman & FrameWork</h3>
+        <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-dark">Yang Sedang Di Pelajari</h2>
+        <p class="font-medium text text-md text-secondary md:text-lg">Sebagai seorang programmer, saya selalu berusaha memperluas pengetahuan dan keterampilan saya dalam berbagai bahasa pemrograman. Berikut adalah bahasa pemrograman yang sedang saya pelajari dan eksplorasi untuk meningkatkan keahlian saya di dunia teknologi.</p>
+    </div>
+</div>
+<div class="w-full px-4">
+    <div class="flex flex-wrap items-center justify-center">
+        <a href="https://if.unpas.ac.id/berita/apa-itu-html-pengertian-sejarah-dan-bagaimana-cara-kerjanya/" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-66 xl:mx-8" target="_blank">
+            <img src="/gambar/html.png" alt="">
+        </a>
+        <a href="https://www.hostinger.co.id/tutorial/apa-itu-css" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-66 xl:mx-8" target="_blank">
+            <img src="/gambar/css.jpeg" alt="">
+        </a>
+        <a href="https://aws.amazon.com/id/what-is/java/" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-66 xl:mx-8" target="_blank">
+            <img src="/gambar/java.png" alt="">
+        </a>
+        <a href="https://www.dicoding.com/blog/python-pengertian-contoh-penggunaan-dan-manfaat-mempelajarinya/" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-66 xl:mx-8" target="_blank">
+            <img src="/gambar/phyton.png" alt="">
+        </a>
+        
+        <a href="https://aws.amazon.com/id/what-is/sql/" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-66 xl:mx-8" target="_blank">
+            <img src="/gambar/sq.png" alt="">
+        </a>
+        <a href="https://www.biznetgio.com/news/apa-itu-php" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-66 xl:mx-8" target="_blank">
+            <img src="/gambar/php.png" alt="">
+        </a>
+        <a href="https://www.exabytes.co.id/blog/apa-itu-tailwind-css-adalah/ " class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-66 xl:mx-8" target="_blank">
+            <img src="/gambar/tail.png" alt="">
+        </a>
+        <a href="https://lp2mp.uma.ac.id/bootstrap-pengertian-fungsi-kelebihan-dan-cara-menggunakannya/" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-66 xl:mx-8" target="_blank">
+            <img src="/gambar/bostrap.jpeg" alt="">
+        </a>
+        
+    </div>
+</div>
+            </div>
+        </section>
+       <!-- bahasa end -->
+        
+       <!-- statiscic starr -->
+      <div class="flex flex-col md:flex-row items-center justify-between px-10 py-16 bg-slate-800 dark:bg-slate-500 animate-pulse">
+        <div class="flex-1  ">
+            <img src="https://coffeedev.ca/wp-content/uploads/2024/03/Turn-Vision-Graphic.webp" alt="Illustration" class="w-full max-w-md mx-auto">
+        </div>
+        <div class="flex-1 text-center md:text-left dark:text-white">
+            <h2 class="text-2xl font-bold mb-4 ">
+                "Jika ingin membangun sesuatu yang besar, mulailah dari langkah keci!"
+            </h2>
+            <p class="text-gray-600 mb-6 dark:text-slate-200">
+                Dalam setiap perjalanan menuju kesuksesan, langkah kecil adalah awal dari sesuatu yang luar biasa. Keberhasilan tidak datang dalam semalam, tetapi melalui kerja keras, dedikasi, dan visi yang jelas. Angka-angka ini adalah bukti dari setiap upaya yang telah dicapai...
+            </p>
+
+            <div class="grid grid-cols-2 gap-6 dark:text-slate-100">
+                <div>
+                    <img width="58" height="58" src="https://img.icons8.com/external-sbts2018-outline-sbts2018/58/external-projects-basic-ui-elements-2.2-sbts2018-outline-sbts2018.png" alt="external-projects-basic-ui-elements-2.2-sbts2018-outline-sbts2018"/>
+                    <span class="block text-4xl font-bold text-primary counter dark:text-slate-100" data-target="11458">0</span>
+                    <p class="text-sm  text-gray-600  dark:text-slate-300">Project Selesai</p>
+                </div>
+                <div>
+                    <img width="64" height="64" src="https://img.icons8.com/fluency/96/cup.png" alt="cup"/>
+                    <span class="block text-4xl font-bold dark:text-slate-100 text-primary counter" data-target="12247">0</span>
+                    <p class="text-sm text-gray-600 dark:text-slate-300">Gelas Kopi</p>
+                </div>
+                <div>
+                    <img width="64" height="64" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-clients-media-agency-flaticons-lineal-color-flat-icons.png" alt="external-clients-media-agency-flaticons-lineal-color-flat-icons"/>
+                    <span class="block text-4xl font-bold dark:text-slate-100 text-primary counter" data-target="11763">0</span>
+                    <p class="text-sm text-gray-600 dark:text-slate-300">Client</p>
+                </div>
+                <div>
+                    <img  width="50" height="50" src="https://img.icons8.com/ios-filled/50/collaborating-in-circle.png" alt="collaborating-in-circle"/>
+                    <span class="block text-4xl font-bold dark:text-slate-100 text-primary counter" data-target="14763">0</span>
+                    <p class="text-sm text-gray-600 dark:text-slate-300">Partnert</p>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- statiscic end -->
+       
+       <!-- Blog start -->
+        <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
+            <div class="container">
+                <div class="w-full px-4">
+                    <div class="max-w-xl mx-auto text-center mb-16">
+                        <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
+                        <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Tulisan Terkini</h2>
+                        <p class="font-medium text text-md text-secondary md:text-lg">Di sini, saya berbagi pemikiran, pengalaman, dan pengetahuan seputar dunia teknologi, pemrograman, dan pengembangan web. Setiap artikel ditulis dengan tujuan untuk memberikan wawasan baru, tips praktis, serta inspirasi bagi siapa saja yang tertarik dalam bidang teknologi. Anda juga dapat mengunjungi blog berita saya <a href="https://hubbabweb.blogspot.com/" class="text-primary dark:text-" target="_blank">DI SINI</a></p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap">
+                    <!-- Blog 1 -->
+                    <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800 transform transition duration-300 hover:scale-105">
+                            <img src="https://img.okezone.com/content/2024/11/08/56/3083491/peluncuran_coding_camp_powered_by_dbs_foundation_2025-4ufg_large.jpg" alt="" class="w-full">
+                            <div class="py-8 px-6">
+                                <h3>
+                                    <a href="https://hubbabweb.blogspot.com/2024/11/gelar-coding-camp-dbs-foundation-ingin.html" target="_blank" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">
+                                        Gelar Coding Camp, DBS Foundation Ingin Cetak Generasi Muda Berketerampilan Digital
+                                    </a>
+                                </h3>
+                                <p class="font-medium text-base text-secondary mb-6">
+                                    Bank DBS bersama Dicoding resmi meluncurkan Coding Camp powered by DBS Foundation 2025 pada Kamis (7/11/2024) yang merupakan program untuk meningkatkan kompetensi pelajar hingga mahasiswa pada
+                                </p>
+                                <a href="https://hubbabweb.blogspot.com/2024/11/gelar-coding-camp-dbs-foundation-ingin.html" target="_blank" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">
+                                    Baca Selengkapnya
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Blog 2 -->
+                    <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800 transform transition duration-300 hover:scale-105">
+                            <img src="https://img.okezone.com/content/2024/11/10/57/3084222/pc_buatan_lokal_advan_forceone-V2o7_large.jpg" alt="" class="w-full">
+                            <div class="py-8 px-6">
+                                <h3>
+                                    <a href="https://hubbabweb.blogspot.com/2024/11/intip-spesifikasi-pc-buatan-lokal.html" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">
+                                        Intip Spesifikasi PC Buatan Lokal ForceOne
+                                    </a>
+                                </h3>
+                                <p class="font-medium text-base text-secondary mb-6">
+                                    JAKARTA - Pabrikan elektronik asal Indonesia, Advan, merilis produk PC terbaru yakni Advan ForceOne. Ini merupakan PC all in one (AIO) yang diklaim mampu memenuhi kebutuhan konsumen baik untuk bekerja maupun bermain game.
+                                </p>
+                                <a href="https://hubbabweb.blogspot.com/2024/11/intip-spesifikasi-pc-buatan-lokal.html" target="_blank" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">
+                                    Baca Selengkapnya
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Blog 3 -->
+                    <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800 transform transition duration-300 hover:scale-105">
+                            <img src="https://img.okezone.com/content/2024/11/12/57/3084739/ilustrasi-wdRP_large.jpg" alt="" class="w-full">
+                            <div class="py-8 px-6">
+                                <h3>
+                                    <a href="https://hubbabweb.blogspot.com/2024/11/bukan-samsung-atau-xiaomi-ini-merek.html" target="_blank" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">
+                                        Bukan Samsung Atau Xiaomi, Ini Merek yang Jadi Raja Pasar Smartphone Asia Tenggara
+                                    </a>
+                                </h3>
+                                <p class="font-medium text-base text-secondary mb-6">
+                                    Samsung berada di posisi kedua, dengan pangsa pasar 16% dalam volume pengiriman, dengan total 4,1 juta unit. Namun, pangsa nilai pengiriman Samsung melampaui pangsa volumenya, mencapai 23%, yang menunjukkan keberhasilan strategi kelas atas.
+                                </p>
+                                <a href="https://hubbabweb.blogspot.com/2024/11/bukan-samsung-atau-xiaomi-ini-merek.html" target="_blank" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">
+                                    Baca Selengkapnya
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+       <!-- Blog end -->
+
+
+       <!-- contact start -->
+        <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
+            <div>
+                <div class="w-full px-4">
+                    <div class="max-w-xl mx-auto text-center mb-16">
+                        <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
+                        <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Hubungi Kami</h2>
+                        <p class="font-medium text text-md text-secondary md:text-lg">Jika Anda tertarik untuk bekerja sama, memiliki pertanyaan, atau sekadar ingin berbincang lebih lanjut, saya dengan senang hati akan mendengarnya! Jangan ragu untuk menghubungi saya melalui formulir di bawah ini atau melalui saluran media sosial yang tersedia. Mari kita mulai percakapan yang inspiratif dan produktif! </p>
+                    </div>
+                </div>
+
+                
+                    <div class="w-full lg:w-2/3 lg:mx-auto">
+                        <div class="w-full px-4 mb-8">
+                            <label for="email" class="text-base font-bold text-primary">Nama</label>
+                            <input 
+                                type="text" 
+                                id="email" 
+                                name="email" 
+                                placeholder="Masukkan Nama Anda" 
+                                class="w-full bg-slate-200 text-dark p-3 py-3  rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
+                        </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="email" class="text-base font-bold text-primary">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Masukkan email Anda" 
+                            class="w-full bg-slate-200 text-dark p-3 py-3  rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="massage" class="text-base font-bold text-primary">Pesan</label>
+                        <textarea type="email" name=""
+                         id="email" placeholder="Masukkan Pesan Anda" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-1 focus:border-primary h-32"></textarea>
+                    </div>
+                    <div class="w-full px-4">
+                        <button class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Kirim</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+       <!-- contact end -->
+
+<!-- footer start -->
+<footer class="bg-dark pt-10 pb-1">
+    <div class="container">
+        <div class="flex flex-wrap">
+            <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+                <h2 class="font-bold text-4xl text-white mb-5 m">Hubbab</h2>
+         
+                <h3 class="font-bold text-2xl mb-2 text-white mt-4">Hubungi Kami</h3>
+                <p>hubab.ix5.16@gmail.com</p>
+                <p>jln.konokene no.322 barat</p>
+                <p>Indonesia</p>
+            </div>
+           
+            <div class="w-full px-4 mb-12 md:w-1/3" >
+                <h3 class="font-semibold text-xl text-white mb-5">Support</h3>
+                <ul class="text-slate-300">
+                    <li>
+                        <a href="https://hubbabweb.blogspot.com/" class="inline-block text-base hover:text-primary mb-3">hubbabweb</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@sandhikagalihWPU" class="inline-block text-base hover:text-primary mb-3">WPU</a>
+                    </li>
+                    <li>
+                        <a href="https://tailwindcss.com/" class="inline-block text-base hover:text-primary mb-3">TailwindCSS</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-full px-4 mb-12 md:w-1/3" >
+                <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+                <ul class="text-slate-300">
+                    <li>
+                        <a href="#home" class="inline-block text-base hover:text-primary mb-3">Beranda</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="inline-block text-base hover:text-primary mb-3">Tentang Saya</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="inline-block text-base hover:text-primary mb-3">Sertifikasi</a>
+                    </li>
+                    <li>
+                        <a href="#client" class="inline-block text-base hover:text-primary mb-3">Bahasa Pemograman</a>
+                    </li>
+                    <li>
+                        <a href="#blog" class="inline-block text-base hover:text-primary mb-3">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="inline-block text-base hover:text-primary mb-3">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+        
+        <div class="w-full pt-10 border-t border-white ">
+            <div class="flex items-center justify-center mb-5"> 
+                <a href="https://instagram/hubbabbb" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-100 hover:border-primary hover:bg-primary hover:text-white bg-slate-100">
+                    <svg role="img" width="20"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+                    </a>
+                <a href="https://www.linkedin.com/in/hubbab-amaruddin-948321298/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center hover:border-primary hover:bg-primary hover:text-white bg-slate-100">
+                    <svg role="img"class="fill-current"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                <a href="https://www.facebook.com/share/14ZmEh72Vv/?mibextid=qi2Omg" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white bg-slate-100">
+                    <svg role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                    </a>
+                <a href="https://github.com/Hubbab-IT" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white bg-slate-100">
+                    <svg role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+               </div>
+               <p class="font-medium text-sm text-slate-500 text-center">Di buat dengan <span class="text-pink-500">😭 </span> oleh <a href="https://instagram.com/hubbabbb" target="_blank" class="font-bold text-primary"> MuhammadHubbabAmaruddin</a> Menggunakan <a href="https://tailwindcss.com" target="_blank" class="font-bold text-primary">TailwindCss</a></p>
+            </div>
+    </div>
+
+</footer>
+<!-- footer end -->
+
+<!-- back to start -->
+ <a href="#home" class=" hidden fixed bottom-4 right-4 z-[9999] h-14 w-14 rounded-full bg-primary p-4 hover:animate-pulse" id="to-top">
+    <span class="block h-5 w-5 border-t-2 border-l-2 rotate-45 justify-center items-center mt-2">
+
+    </span>
+ </a>
+<!-- back to end -->
+ 
+    <script src="js/script.js"></script>  
+</body>
+</html>
